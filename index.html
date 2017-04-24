@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		background: red;
+		top:0;
+		left:0;
+	}
+	</style>
+	<script src="www/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+ $(function(){
+            var oDiv=$('div');
+            oDiv.animate({'left':'200px'},{'complete':function(){
+                oDiv.animate({'top':'200px'})
+            }},{'complete':function(){
+                oDiv.animate({'right':'200px'})
+            }})
+        })	
+	</script>
+</head>
+<body>
+<div></div>	
+</body>
+</html>
